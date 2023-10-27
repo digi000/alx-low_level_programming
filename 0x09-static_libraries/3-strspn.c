@@ -1,20 +1,35 @@
-int _putchar(char c);
-int _islower(int c);
-int _isalpha(int c);
-int _abs(int n);
-int _isupper(int c);
-int _isdigit(int c);
-int _strlen(char *s);
-void _puts(char *s);
-char *_strcpy(char *dest, char *src);
-int _atoi(char *s);
-char *_strcat(char *dest, char *src);
-char *_strncat(char *dest, char *src, int n);
-char *_strncpy(char *dest, char *src, int n);
-int _strcmp(char *s1, char *s2);
-char *_memset(char *s, char b, unsigned int n);
-char *_memcpy(char *dest, char *src, unsigned int n);
-char *_strchr(char *s, char c);
-unsigned int _strspn(char *s, char *accept);
-char *_strpbrk(char *s, char *accept);
-char *_strstr(char *haystack, char *needle);
+#include "main.h"
+
+/**
+ * *_strspn - gets the length of a prefix substring
+ * @s: string to evaluate
+ * @accept: string containing the list of characters to match in s
+ *
+ * Return: the number of bytes in the initial segment
+ * of s which consist only of bytes from accept
+ */
+unsigned int _strspn(char *s, char *accept)
+{
+	int i, j, f, flag;
+
+	f = 0;
+
+	for (i = 0; s[i] != '\0'; i++)
+	{
+		flag = 0;
+		for (j = 0; accept[j] != '\0'; j++)
+		{
+			if (s[i] == accept[j])
+			{
+				f++;
+				flag = 1;
+			}
+		}
+		if (flag == 0)
+		{
+			return (f);
+		}
+	}
+
+	return (0);
+}
