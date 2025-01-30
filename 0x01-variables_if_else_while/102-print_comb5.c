@@ -19,7 +19,7 @@ int main(void)
 				while (l < 10)
 				{
 					if (k == 0 && k == l)
-						++l;
+						l = j + 1;
 					putchar(h + '0');
 					putchar(j + '0');
 					putchar(' ');
