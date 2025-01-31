@@ -1,32 +1,36 @@
-#include <stdio.h>
+#include "main.h"
 /**
  * jack_bauer - hrs and ms
  */
 void jack_bauer(void)
 {
-	int hrs = 0, mns;
+	int a = 0, b, c, d;
 
-	while (hrs < 24)
+	while (a < 3)
 	{
-		mns = 0;
-		while (mns < 60)
+		b = 0;
+		while (b < 10)
 		{
-			if (hrs < 10)
+			if (a == 2 && b > 3)
+				break;
+			c = 0;
+			while (c < 6)
 			{
-				if (mns < 10)
-					printf("0%d:0%d\n", hrs, mns);
-				else
-					printf("0%d:%d\n", hrs, mns);
+				d = 0;
+				while (d < 10)
+				{
+					_putchar(a + '0');
+					_putchar(b + '0');
+					_putchar(':');
+					_putchar(c + '0');
+					_putchar(d + '0');
+					_putchar('\n');
+					d++;
+				}
+				c++;
 			}
-			else
-			{
-				if (mns < 10)
-					printf("%d:0%d\n", hrs, mns);
-				else
-					printf("%d:%d\n", hrs, mns);
-			}
-			mns++;
+			b++;
 		}
-		hrs++;
+		a++;
 	}
 }
