@@ -1,15 +1,16 @@
+#include "main.h"
 /**
  * print_numbers - 0-9
  */
 void print_numbers(void)
 {
-	int ct = 0;
+	int ct = '0';
 
-	while (ct < 10)
+	while (ct <= '0' + 9)
 	{
-		if (ct != 9)
-			printf("%d", ct);
-		else
-			printf("%d\n", ct)
+		_putchar(ct);
+		if (ct == '0' + 9)
+			_putchar('\n');
+		ct++;
 	}
 }
