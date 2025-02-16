@@ -10,13 +10,15 @@ int main(void)
 	while (np <= 100)
 	{
 		if (np % 3 == 0 && np % 5 == 0)
-			printf("FizzBuzz ");
+			printf("FizzBuzz");
 		else if (np % 3 == 0)
-			printf("Fizz ");
+			printf("Fizz");
 		else if (np % 5 == 0)
-			printf("Buzz ");
+			printf("Buzz");
 		else
-			printf("%d ", np);
+			printf("%d", np);
+		if (np != 100)
+			printf(" ");
 		np++;
 	}
 	printf("\n");
