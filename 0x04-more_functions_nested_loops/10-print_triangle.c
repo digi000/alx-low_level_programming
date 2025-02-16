@@ -11,6 +11,8 @@ void print_triangle(int size)
 	int m = 0;
 	int l = 0;
 
+	if (size > 0)
+	{
 	while (i < size)
 	{
 		j--;
@@ -32,4 +34,7 @@ void print_triangle(int size)
 		_putchar('\n');
 		i++;
 	}
+	}
+	else
+		_putchar('\n');
 }
