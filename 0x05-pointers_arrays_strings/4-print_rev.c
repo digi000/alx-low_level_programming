@@ -10,6 +10,7 @@ void print_rev(char *s)
 	{
 		ct++;
 	}
+	ct = ct - 1;
 	while (ct >= 0)
 	{
 		_putchar(s[ct]);
