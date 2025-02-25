@@ -6,11 +6,16 @@
  */
 int _strcmp(char *s1, char *s2)
 {
-	int bn, ct = 0;
+	int bn, dr, ct = 0;
 
 	while (s1[ct] != '\0')
 	{
 		ct++;
+	}
+	dr = 0;
+	while (s2[dr] != '\0')
+	{
+		dr++;
 	}
 	bn = 0;
 	while (s2[bn] != '\0')
@@ -20,6 +25,6 @@ int _strcmp(char *s1, char *s2)
 	if (ct == bn)
 		return (0);
 	else if (ct < bn)
-		return (-15);
-	return (15);
+		return (ct - dr);
+	return (ct - dr);
 }
