@@ -12,7 +12,7 @@ char *cap_string(char *vb)
 	while (vb[ct] != '\0')
 	{
 		nb = 0;
-		while (nb <= 12)
+		while (nb <= 13)
 		{
 			if (vb[ct] == sh[nb])
 			{
