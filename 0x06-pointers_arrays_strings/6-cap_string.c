@@ -1,4 +1,3 @@
-#include <stdio.h>
 /**
  * *cap_string - hh
  * @vb: df
@@ -11,19 +10,6 @@ char *cap_string(char *vb)
 
 	while (vb[ct] != '\0')
 	{
-		/*
-		if (((vb[ct] > 122) || (vb[ct] < 97)) && ((vb[ct] < 65) || (vb[ct] > 90)))
-		{
-			printf("in\n");
-			
-			if (vb[ct + 1] <= 122 && vb[ct + 1] >= 97)
-			{
-				ct++;
-				printf("out\n");
-				vb[ct] = vb[ct] - 32;
-			}
-		}
-		*/
 		nb = 0;
 		while (nb <= 12)
 		{
@@ -35,7 +21,6 @@ char *cap_string(char *vb)
 				}
 				if (vb[ct + 1] <= 122 && vb[ct + 1] >= 97)
 				{
-					printf("out");
 					ct++;
 					vb[ct] = vb[ct] - 32;
 					break;
