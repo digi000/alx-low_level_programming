@@ -6,10 +6,12 @@
  */
 char *cap_string(char *vb)
 {
-	int ct = 0;
+	int nb, ct = 0;
+	char sh[13] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 
 	while (vb[ct] != '\0')
 	{
+		/*
 		if (((vb[ct] > 122) || (vb[ct] < 97)) && ((vb[ct] < 65) || (vb[ct] > 90)))
 		{
 			printf("in\n");
@@ -20,6 +22,26 @@ char *cap_string(char *vb)
 				printf("out\n");
 				vb[ct] = vb[ct] - 32;
 			}
+		}
+		*/
+		nb = 0;
+		while (nb <= 12)
+		{
+			if (vb[ct] == sh[nb])
+			{
+				if (vb[ct] == '\t')
+				{
+					vb[ct] = ' ';
+				}
+				if (vb[ct + 1] <= 122 && vb[ct + 1] >= 97)
+				{
+					printf("out");
+					ct++;
+					vb[ct] = vb[ct] - 32;
+					break;
+				}
+			}
+			nb++;
 		}
 		ct++;
 	}
