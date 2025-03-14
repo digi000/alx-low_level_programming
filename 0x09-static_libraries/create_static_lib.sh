@@ -17,3 +17,4 @@ done
 
 eval "$clib"
 ranlib liball.a
+
