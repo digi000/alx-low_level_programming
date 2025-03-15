@@ -11,11 +11,11 @@ char *str_concat(char *s1, char *s2)
 	char *gh;
 	int su, n, i, j = 0;
 	
-	while (s1[j] != '\0')
+	while (s1[j] != '\0' && s1 != NULL)
 		j++;
 
 	i = 0;
-	while (s2[i] != '\0')
+	while (s2[i] != '\0' && s2 != NULL)
 		i++;
 	su = i + j + 1;
 	gh = malloc(sizeof(*gh) * su);
