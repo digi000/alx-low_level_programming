@@ -9,6 +9,8 @@ char *_strdup(char *str)
 	char *jk;
 	int i;
 
+	if (str == NULL)
+		return (NULL);
 	if (*str == '\0')
 		return (NULL);
 	i = 0;
@@ -16,8 +18,6 @@ char *_strdup(char *str)
 	{
 		i++;
 	}
-	if (i < 1)
-		return NULL;
 	i++;
 
 	jk = malloc(sizeof(*jk) * i);
