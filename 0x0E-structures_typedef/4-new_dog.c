@@ -1,7 +1,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include "dog.h"
-
+/**
+ * new_dog - sd
+ * @name: jwek
+ * @age: hj
+ * @owner: jdf
+ * Return: fd
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *myd;
