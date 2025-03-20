@@ -18,10 +18,10 @@ int main(int argc, char *argv[])
 	p = get_op_func(argv[2]);
 	if (p == NULL)
 	{
-		printf("Error");
+		printf("Error\n");
 		exit(99);
 	}
 	result = p(n1, n2);
-	printf("%d", result);
+	printf("%d\n", result);
 	return (0);
 }
