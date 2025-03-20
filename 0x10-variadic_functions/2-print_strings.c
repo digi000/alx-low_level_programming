@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdarg.h>
+#include <stdlib.h>
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -7,6 +8,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *ss;
 	va_list args;
 
+	if (n == 0)
+		exit(1);
 	va_start(args, n);
 	i = 0;
 	while (i < n)
