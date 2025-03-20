@@ -27,11 +27,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 		{
 			if (ss)
-				printf("%s\n", ss);
+				printf("%s", ss);
 			else
-				printf("(nil)\n");
+				printf("(nil)");
 		}
 		i++;
 	}
+	printf("\n");
 	va_end(args);
 }
