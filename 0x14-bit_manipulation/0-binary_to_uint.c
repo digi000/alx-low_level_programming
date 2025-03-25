@@ -5,9 +5,12 @@ unsigned int binary_to_uint(const char *b)
 	int sum;
 	int count;
 	int intz;
+	int m;
 
+	for (m = 0; b[m] != NULL; m++)
+	{}
 	i = 0;
-	while (i < strlen(b))
+	while (i < m)
 	{
 		if (b[i] != '1' && b[i] != '0')
 			return (0);
