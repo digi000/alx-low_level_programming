@@ -1,13 +1,13 @@
-#include "main.h"
+#include <stdlib.h>
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int i;
 	int sum;
 	int count;
 	int intz;
-	int m;
+	unsigned int m;
 
-	for (m = 0; b[m] != NULL; m++)
+	for (m = 0; b[m] != '\0'; m++)
 	{}
 	i = 0;
 	while (i < m)
