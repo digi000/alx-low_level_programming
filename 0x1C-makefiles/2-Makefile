@@ -1,0 +1,9 @@
+all: ert
+CC = gcc
+SRC = main.c school.c
+OBJ = main.o school.o
+NAME = school
+ert:
+	${CC} -c -o $(word 1, $(OBJ)) $(word 1, $(SRC))
+	${CC} -c -o $(word 2, $(OBJ)) $(word 2, $(SRC))
+	${CC} $(word 1, $(OBJ)) $(word 2, $(OBJ)) -o $(NAME)
