@@ -9,8 +9,13 @@ def island_perimeter(grid):
     column = 0
     listy = 0
     while i < rw:
+        if i == 100:
+            break
         j = 0
         while j < cl:
+            if j == 100:
+                i = 100
+                break
             if grid[i][j] == 0:
                 pass
             elif grid[i][j] == 1 and length < 1:
