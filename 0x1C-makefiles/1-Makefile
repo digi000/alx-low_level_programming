@@ -1,0 +1,5 @@
+all: excr
+CC = gcc
+SRC = $(wildcard *.c)
+excr:
+	${CC} ${SRC} -o school
