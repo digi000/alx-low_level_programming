@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """5. Island Perimeter"""
 def island_perimeter(grid):
     """5. Island Perimeter"""
