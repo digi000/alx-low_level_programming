@@ -1,5 +1,6 @@
 all: excr
 CC = gcc
 SRC = $(wildcard *.c)
+ER = school
 excr:
-	${CC} ${SRC} -o school
+	${CC} ${SRC} -o ${ER}
